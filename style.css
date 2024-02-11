@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Libre+Caslon+Text:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* body {
-  background-color: red;
-} */
+body {
+  font-family: "Libre Caslon Text", serif;
+}
 a {
   text-decoration: none;
 }
@@ -15,10 +18,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1300px;
+  max-width: 1500px;
   margin: auto;
   position: relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .container .slide {
@@ -82,8 +85,8 @@ a {
 .dots-container .dot {
   cursor: pointer;
   margin: 5px;
-  width: 18px;
-  height: 18px;
+  width: 8px;
+  height: 8px;
   color: #333;
   border-radius: 10%;
   background-color: #b5b5b5;
@@ -100,4 +103,308 @@ a {
   100% {
     opacity: 1;
   }
+}
+
+/* NAVBAR */
+header {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* border: 1px solid green; */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 5em;
+}
+
+header nav {
+  /* padding: 1.5em 0 1.5em 5em; */
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.underline {
+  border-bottom: 1px solid white;
+  /* width: 1px;
+  height: 13px;
+  font-weight: 500;
+  text-decoration: underline; */
+}
+header ul {
+  display: flex;
+  margin-top: 10px;
+}
+
+.log-in {
+  margin-top: 10px;
+}
+header nav ul li {
+  margin: 2px 31px;
+  padding: 5px 15px;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+header:hover {
+  background-color: #fff;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav ul li a {
+  color: black;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav .logo {
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav .underline {
+  border-bottom: 1px solid black;
+}
+
+header nav ul li a:hover {
+  opacity: 0.4;
+  transition: 0.4s ease;
+}
+
+/* SUB MENU STYLE */
+
+.submenu {
+  position: fixed;
+  left: 0;
+  height: 250px;
+  background-color: #fff;
+  /* top: 100%; */
+  /* padding: 10px; */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 69px;
+  /* gap: -25px; */
+  border: 1px solid green;
+  gap: 110px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  /* transition: 0.2s 1s; */
+  transition: 0.2s 0.1s;
+}
+
+.submenu:hover {
+  background-color: #fff;
+}
+
+.submenu .submenu-header {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.submenu li {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin: 0;
+  font-size: 11.4px;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.submenu li a {
+  font-size: 11.4px;
+}
+li:hover ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+  transition-delay: 0s;
+}
+
+.submenu-wrapper.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submenu-wrapper.search {
+  /* display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  border: 1px solid red; */
+}
+
+.submenu.search {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 30px; */
+  border: 1px solid red;
+}
+
+.submenu.search .submenu-header {
+  position: relative;
+  top: -80px;
+  left: 140px;
+}
+
+.submenu.search form {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  /* left: 0; */
+  right: 70px;
+  top: 40%;
+}
+
+.submenu.search form input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.submenu.search form input:focus {
+  outline: none;
+}
+
+.submenu.search form input::placeholder {
+  font-style: italic;
+}
+
+.submenu-wrapper.search li {
+  margin-top: 60px;
+}
+
+.submenu-wrapper.contact li {
+  /* color: red; */
+  /* margin: 5px; */
+  /* margin: 5px 0; */
+}
+
+.submenu-wrapper.contact .submenu-header {
+  margin-bottom: 10px;
+}
+
+.submenu-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid lime;
+  position: relative;
+  bottom: -15px;
+}
+/* header ul .submenu {
+  border: 1px solid red;
+  position: absolute;
+  max-width: 100vw;
+  height: 200px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -999;
+  transition: all ease 1.5s;
+} */
+header ul .submenu {
+  /* width: 100%;
+  border: 1px solid red;
+  position: absolute;
+  height: 0;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -999;
+  left: 0; */
+  /* opacity: 0; */
+  /* border: 1px solid red;
+  position: relative;
+  left: 0;
+  height: 200px;
+  background-color: #fff;
+  width: 100vw; */
+  /* display: flex;
+  flex-direction: column;
+  opacity: 1;
+  align-items: center;
+  justify-content: space-between; */
+  /* position: relative;
+  left: 0; */
+  /* width: 1300px; */
+  /* background-color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; */
+}
+
+header ul .submenu li {
+  /* font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0; */
+}
+
+/* justify-content: space-between; */
+
+/* header ul .submenu li:last-child {
+  margin-top: 0;
+}
+
+header ul .submenu li a {
+  font-size: 10px;
+}
+
+.submenu-header {
+  font-size: 20px;
+} */
+
+header ul .submenu li {
+  /* z-index: 1;
+  display: flex;
+  flex-direction: column; */
+}
+
+/* header ul .submenu li a {
+  display: flex;
+} */
+
+/* .submenu,
+.submenu-items,
+.submenu-header {
+} */
+
+header ul li:hover .submenu {
+  /* z-index: 99;
+  opacity: 1;
+  height: 200px;
+  transition: height ease-in-out 0.4s; */
+  /* margin-bottom: 0; */
+  /* margin-top: 0;
+  transition: margin-top ease-in-out 1.4s; */
 }

@@ -35,9 +35,9 @@ const prev = () => {
 document.querySelector(".next").addEventListener("click", next);
 document.querySelector(".prev").addEventListener("click", prev);
 
-setInterval(() => {
-  next();
-}, 5000);
+// setInterval(() => {
+//   next();
+// }, 5000);
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
