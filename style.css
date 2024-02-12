@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Libre+Caslon+Text:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -127,7 +127,7 @@ header nav {
 
 .logo {
   color: #fff;
-  font-family: "Lato", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 20px;
@@ -175,12 +175,13 @@ header:hover nav .logo {
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   transition: 0.4s ease-in;
 }
 
 header:hover nav .underline {
   border-bottom: 1px solid black;
+  /* transition: 0.2s ease; */
 }
 
 header nav ul li a:hover {
@@ -206,7 +207,7 @@ header nav ul li a:hover {
   align-items: center;
   top: 69px;
   /* gap: -25px; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   gap: 110px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -319,7 +320,7 @@ li:hover ul.submenu {
   flex-direction: column;
   align-items: center;
 
-  border: 1px solid lime;
+  /* border: 1px solid lime; */
   position: relative;
   bottom: -15px;
 }
@@ -407,4 +408,127 @@ header ul li:hover .submenu {
   /* margin-bottom: 0; */
   /* margin-top: 0;
   transition: margin-top ease-in-out 1.4s; */
+}
+
+/* Hero Section */
+
+.hero {
+  /* border: 1px solid red; */
+  margin: 130px 0px;
+  height: 500px;
+}
+
+.hero-img {
+  width: 600;
+  height: 650px;
+  margin-left: 150px;
+}
+.hero-wrapper {
+  /* border: 1px solid green; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+  border: 1px solid green;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-container {
+}
+.hero-text-section {
+  border: 1px solid rgb(61, 48, 24);
+  width: 30%;
+  padding: 20px 60px;
+  margin-left: 80px;
+  height: 50%;
+}
+
+.hero-heading {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.hero-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.product-card-section {
+  margin: 50px 20px;
+  /* padding: 10px 0px; */
+}
+.product-card {
+  background: #f1f1f1;
+  width: 300px;
+  height: 370px;
+}
+
+.product-img:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-title:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-description:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-price:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.product-card .product-img {
+  width: 250px;
+  height: 250px;
+}
+.product-title {
+  font-family: "Lato", sans-serif;
+  padding: 20px 10px;
+}
+
+.product-description {
+  font-size: 12px;
+  font-family: "Libre Caslon Text", serif;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid lime; */
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.product-price {
+  /* color: red; */
+  font-size: 14px;
+}
+
+.product-price span {
+  font-size: 4.9px;
+}
+.product-grid {
+  display: grid;
+  /* grid-template-columns: 1fr 4fr; */
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 400px 500px;
+  margin-top: -390px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
 }
