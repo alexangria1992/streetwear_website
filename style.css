@@ -29,6 +29,37 @@ a {
   /* border: 1px solid red; */
 }
 
+.arcade-banner-text {
+  position: absolute;
+  /* color: white; */
+  top: 337px;
+  left: 737px;
+  color: white;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 25px;
+  opacity: 0.9;
+}
+
+.carhartt-banner-text {
+  position: absolute;
+
+  top: 337px;
+  left: 737px;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 30px;
+  color: white;
+}
+
+.nb-banner-text {
+  position: absolute;
+
+  top: 92px;
+  left: 490px;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 30px;
+  color: white;
+}
+
 .container .slide {
   display: none;
   width: 100%;
@@ -708,10 +739,6 @@ footer {
   color: #fff;
 }
 
-.footer-logo .underline {
-  border-bottom: 0.5px solid white;
-  z-index: 2;
-}
 .contact-header {
   color: #fff;
 }
