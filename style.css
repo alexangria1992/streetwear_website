@@ -437,8 +437,8 @@ header ul li:hover .submenu {
 }
 
 .hero-img {
-  width: 600;
-  height: 650px;
+  width: 650px;
+  height: 700px;
   margin-left: 150px;
 }
 .hero-wrapper {
@@ -478,19 +478,24 @@ header ul li:hover .submenu {
 .product-grid {
   display: grid;
   /* grid-template-columns: 1fr 4fr; */
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 400px 500px;
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 500px; */
+  grid-template-rows: 400px 350px;
+  /* column-gap: -150px; */
   margin-top: -320px;
 }
 
 .product-card-section {
-  margin: 50px 20px;
+  /* margin: 50px 42px; */
+  margin: 50px 42px;
+
   /* padding: 10px 0px; */
 }
 .product-card {
   background: #f1f1f1;
-  width: 300px;
+  width: 256px;
   height: 370px;
+  margin-bottom: -20px;
 }
 
 .product-img:hover {
@@ -574,13 +579,14 @@ header ul li:hover .submenu {
   width: 357px;
   padding: 20px 60px;
   height: 50%;
+
   /* border: 1px solid green; */
 }
 
 .lunar-img {
-  width: 600;
+  width: 665px;
   height: 650px;
-  /* margin-left: 150px; */
+  margin-left: -58px;
 }
 
 .lunar-wrapper {
@@ -594,13 +600,18 @@ header ul li:hover .submenu {
 
 .lunar-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 400px 500px;
-  margin-left: -200px;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 500px; */
+  grid-template-rows: 400px 350px;
+  margin-left: -300px;
+  /* grid-gap: 50px; */
 }
 
 /* Gramicci Section */
+.gramicci-section {
+  margin-top: 178px;
+}
 
 .gramicci-text {
   font-family: "Lato", sans-serif;
@@ -628,4 +639,44 @@ header ul li:hover .submenu {
 
 .product-grid.gramicci {
   margin-top: -440px;
+}
+
+/* Reebok Section */
+
+.reebok-section {
+  margin-top: 197px;
+}
+.reebok-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  border: 1px solid green;
+}
+
+.reebok-text-section {
+  width: 357px;
+  padding: 20px 45px;
+  border: 1px solid blue;
+  height: 50%;
+}
+
+.reebok-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  position: relative;
+  left: 50px;
+  line-height: 1.3;
+}
+
+.reebok-img {
+  width: 500px;
+  height: 650px;
+}
+
+.reebok-grid {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 500px; */
+  grid-template-rows: 400px 350px;
+  margin-left: -261px;
 }
