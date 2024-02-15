@@ -969,7 +969,8 @@ p.footer-phone {
     align-items: flex-start;
     position: relative;
     left: -46px;
-    top: -97px;
+    top: -7px;
+    padding: 10px 20px;
   }
 
   li:hover ul.submenu {

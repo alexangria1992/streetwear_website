@@ -57,7 +57,7 @@ const navObserver = new IntersectionObserver((entries) => {
 
 navObserver.observe(scrollWatcher);
 
-const size = slideImages[0].clientWidth;
+// const size = slideImages[0].clientWidth;
 
 const init = (n) => {
   slides.forEach((slide, index) => {
@@ -74,10 +74,10 @@ const init = (n) => {
 
 document.addEventListener("DOMContentLoaded", init(currentSlide));
 const next = () => {
-  slides[currentSlide].style.transition = "transform 0.4s ease-in-out";
+  // slides[currentSlide].style.transition = "transform 0.4s ease-in-out";
   currentSlide >= slides.length - 1 ? (currentSlide = 0) : currentSlide++;
-  slides[currentSlide].style.transform =
-    "translateX(" + -size * currentSlide + "px)";
+  // slides[currentSlide].style.transform =
+  //   "translateX(" + -size * currentSlide + "px)";
   init(currentSlide);
 };
 
@@ -89,9 +89,9 @@ const prev = () => {
 document.querySelector(".next").addEventListener("click", next);
 document.querySelector(".prev").addEventListener("click", prev);
 
-// setInterval(() => {
-//   next();
-// }, 5000);
+setInterval(() => {
+  next();
+}, 5000);
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
