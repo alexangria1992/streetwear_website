@@ -5,6 +5,47 @@ const dots = document.querySelectorAll(".dot");
 const primaryHeader = document.querySelector(".primary-header");
 const scrollWatcher = document.createElement("div");
 
+const btnOpen = document.querySelector("#btnOpen");
+const btnClose = document.querySelector("#btnClose");
+const media = window.matchMedia("(width < 1024px)");
+const topNavMenu = document.querySelector(".topnav-menu");
+
+function setupTopNav(e) {
+  if (e.matches) {
+    // is mobile
+    console.log("is mobile");
+    topNavMenu.setAttribute("inert", "");
+    topNavMenu.style.transition = "none";
+  } else {
+    console.log("is desktop");
+    topNavMenu.removeAttribute("inert");
+  }
+}
+
+function openMobileMenu() {
+  // console.log("Click");
+  btnOpen.setAttribute("aria-expanded", "true");
+  topNavMenu.removeAttribute("inert");
+  topNavMenu.removeAttribute("style");
+}
+
+function closeMobileMenu() {
+  btnOpen.setAttribute("aria-expanded", "false");
+  topNavMenu.setAttribute("inert", "");
+
+  setTimeout(() => {
+    topNavMenu.style.transition = "none";
+  }, 500);
+}
+
+setupTopNav(media);
+
+btnOpen.addEventListener("click", openMobileMenu);
+btnClose.addEventListener("click", closeMobileMenu);
+
+media.addEventListener("change", function (e) {
+  setupTopNav(e);
+});
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
 primaryHeader.before(scrollWatcher);

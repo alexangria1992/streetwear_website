@@ -15,8 +15,30 @@
   </head>
   <body>
     <header class="primary-header">
-      <nav>
+      <span id="nav-label" hidden>Navigation</span>
+
+      <!-- <div class="menu-btn-container"> -->
+      <a class="mobile-logo">EVERY<span class="mobile-underline">W</span>EAR</a>
+
+      <button
+        id="btnOpen"
+        class="menu-btn"
+        aria-expanded="false"
+        aria-labelledby="nav-label"
+      >
+        <img src="./img/hamburger.svg" alt="" />
+      </button>
+
+      <!-- </div> -->
+      <!-- </span> -->
+
+      <nav class="topnav-menu">
+        <button class="close-btn" id="btnClose" aria-label="Close">
+          <img src="img/close.svg" alt="" width="28" height="27" />
+        </button>
+
         <a class="logo">EVERY<span class="underline">W</span>EAR</a>
+
         <ul>
           <li>
             <a href="">Latest </a>
@@ -131,7 +153,7 @@
               <ul class="submenu">
                 <div class="submenu-wrapper contact">
                   <a href="" class="submenu-header address">Everywear</a>
-                  <li>
+                  <li class="test">
                     198 Hepburn St,<br /><br />
                     Grey Lynn, Grey Lynn,<br /><br />
                     Auckland, New Zealand
@@ -139,7 +161,7 @@
                 </div>
                 <div class="submenu-wrapper contact">
                   <a href="" class="submenu-header">Contact</a>
-                  <li><a href="">+64 361 3336</a></li>
+                  <li><a href="">+64 9 556 7832</a></li>
                   <li><a href="">online@everywear.co</a></li>
                 </div>
                 <div class="submenu-wrapper contact">
@@ -361,7 +383,7 @@
               </div>
             </div>
 
-            <div class="image-container">
+            <div class="image-container lunar">
               <img class="lunar-img" src="./img/lunar-main.webp" alt="" />
             </div>
           </div>
@@ -540,7 +562,9 @@
               New Zealand
             </p>
             <br />
-            <p class="footer-phone">+ 64 9 361 3336 <br />online@knowear.co</p>
+            <p class="footer-phone">
+              + 64 9 556 7832 <br />online@everywear.co
+            </p>
           </div>
           <div class="footer-info">
             <p class="info-title">Info</p>

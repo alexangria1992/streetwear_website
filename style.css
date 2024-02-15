@@ -80,15 +80,22 @@ a {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  /* width: auto; */
+  width: 50px;
   margin-top: 300px;
   padding: 16px;
   color: #fff;
   font-weight: bold;
   font-size: 40px;
+  height: 80px;
   transition: all 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 .container .prev:hover,
@@ -167,7 +174,7 @@ header {
 }
 
 .primary-header.sticking nav .underline {
-  border-bottom: 0.5px solid black;
+  border-bottom: 2px solid black;
 }
 
 header nav {
@@ -187,7 +194,7 @@ header nav {
 }
 
 .underline {
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   /* width: 1px;
   height: 13px;
   font-weight: 500;
@@ -233,7 +240,7 @@ header:hover nav .logo {
 }
 
 header:hover nav .underline {
-  border-bottom: 0.5px solid black;
+  border-bottom: 2px solid black;
   /* transition: 0.2s ease; */
 }
 
@@ -241,6 +248,11 @@ header nav ul li a:hover {
   opacity: 0.4;
   transition: 0.4s ease;
 }
+
+/* header nav ul.submenu li:hover {
+  opacity: 0.4;
+  transition: 0.4s ease;
+} */
 
 /* SUB MENU STYLE */
 
@@ -653,7 +665,7 @@ header ul li:hover .submenu {
 }
 
 .gramicci-text-section {
-  border: 1px solid rgb(23, 12, 227);
+  /* border: 1px solid rgb(23, 12, 227); */
   width: 481px;
   padding: 20px 60px;
 }
@@ -681,13 +693,13 @@ header ul li:hover .submenu {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .reebok-text-section {
   width: 357px;
   padding: 20px 45px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 50%;
 }
 
@@ -783,4 +795,386 @@ p.footer-phone {
 .footer-socials {
   display: flex;
   flex-direction: column;
+}
+
+/*  mobile nav */
+
+.close-btn {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+.menu-btn-container {
+  display: none;
+}
+
+.menu-btn[aria-expanded="true"] {
+  + .topnav-menu {
+    translate: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-logo {
+    display: block;
+    /* background-color: red !important; */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 22px 14px;
+  }
+
+  .mobile-underline {
+    border-bottom: 2px solid black;
+  }
+  header nav {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    overflow: hidden;
+
+    align-items: flex-start;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+    display: none;
+  }
+
+  .menu-btn-container {
+    /* border: 1px solid red; */
+    display: flex;
+    /* background-color: red; */
+    /* flex-wrap: wrap; */
+    /* width: 76px;
+    height: 68px;
+    position: absolute;
+    right: 0;
+    padding: 20px 0; */
+    /* z-index: -100; */
+    /* display: block; */
+    width: 76px;
+    height: 68px;
+    position: absolute;
+    right: 0;
+    padding: 20px 40px;
+  }
+
+  /* .menu-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  } */
+  .menu-btn {
+    /* display: block;
+    color: black;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    left: 870px; */
+    /* max-width: ; */
+    background: none;
+    border: none;
+    display: block;
+    /* z-index: 2000; */
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    /* position: absolute;
+    right: 0;
+    top: 20px;
+    left: 835px;
+    max-width: 100%;
+    flex-wrap: wrap; */
+  }
+
+  .close-btn {
+    display: block;
+
+    /* display: block; */
+    /* border: none;
+    background: none;
+    padding: 20px 40px;
+    width: 2.5rem; */
+    /* margin-inline-start: auto; */
+    /* margin-top: -223px;
+    margin-right: 79px;
+    overflow: hidden;  */
+    /* position: absolute;
+    left: 879px; */
+    position: absolute;
+    right: 20px;
+    border: none;
+    background: none;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  header nav .logo {
+    color: white !important;
+    padding: 20px 0;
+  }
+
+  .underline {
+    border-bottom: 2px solid white !important;
+  }
+  header nav ul li a {
+    color: white !important;
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: -46px;
+    top: -97px;
+  }
+
+  li:hover ul.submenu {
+    display: none;
+  }
+
+  header nav div.log-in {
+    display: none;
+  }
+
+  header {
+    background-color: #fff;
+    position: fixed;
+    overflow: hidden;
+  }
+
+  header:hover {
+    display: block;
+  }
+}
+
+@media (min-width: 520px) {
+  .container {
+    /* background-color: red; */
+    /* border: 1px solid red; */
+    width: 788px;
+  }
+
+  .container .slide img {
+    width: 100%;
+    height: 587px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .container .next {
+    left: 451px;
+
+    top: -14px;
+  }
+
+  .container .prev {
+    left: 2px;
+    top: -11px;
+  }
+
+  .dots-container {
+    right: 50%;
+    left: 124px;
+  }
+
+  .hero-img {
+    width: 427px;
+    height: 460px;
+    margin-right: auto;
+    /* transform: translateX(-80%); */
+    /* z-index: -1; */
+    position: absolute;
+    /* top: 30px; */
+    top: -72px;
+    right: 99px;
+
+    /* float: left; */
+  }
+
+  .hero-text-section p {
+    display: none;
+  }
+
+  .image-container {
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 30%;
+    position: relative;
+  }
+
+  .product-grid {
+    margin-top: 393px;
+    margin-left: -33px;
+    /* border: 1px solid green; */
+    grid-template-columns: 251px 300px;
+    grid-template-rows: 323px 350px;
+  }
+
+  .product-card {
+    /* background-color: red; */
+    width: 229px;
+    height: 299px;
+  }
+
+  .product-card .product-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: -24px;
+  }
+
+  .product-description {
+    font-size: 11px;
+  }
+
+  .lunar-text-section .hero-heading,
+  .lunar-text-section .lunar-text {
+    display: none;
+  }
+
+  .image-container.lunar {
+    position: relative;
+  }
+
+  .lunar-img {
+    position: absolute;
+    top: -90px;
+    left: 97px;
+    width: 517px;
+    height: 481px;
+  }
+
+  .lunar-grid {
+    display: grid;
+    grid-template-columns: 253px 300px;
+    grid-template-rows: 325px 350px;
+    margin-left: -238px;
+    margin-top: 416px;
+  }
+
+  .gramicci-text-section {
+    display: none;
+  }
+
+  .gramicci-img {
+    width: 379px;
+    height: 460px;
+    margin-right: auto;
+    /* transform: translateX(-80%); */
+    /* z-index: -1; */
+    position: absolute;
+    /* top: 30px; */
+    top: -140px;
+    right: -12px;
+  }
+
+  .product-grid.gramicci {
+    margin-top: 332px;
+    margin-left: -33px;
+    /* border: 1px solid green; */
+    grid-template-columns: 251px 300px;
+    grid-template-rows: 323px 350px;
+  }
+
+  .reebok-text-section .hero-heading,
+  .reebok-text-section .reebok-text {
+    display: none;
+  }
+
+  .reebok-img {
+    width: 379px;
+    height: 460px;
+    margin-right: auto;
+    /* transform: translateX(-80%); */
+    /* z-index: -1; */
+    position: absolute;
+    /* top: 30px; */
+    top: -121px;
+    right: -345px;
+  }
+
+  .reebok-grid {
+    display: grid;
+    grid-template-columns: 251px 300px;
+    /* grid-template-rows: 400px 500px; */
+    grid-template-rows: 323px 350px;
+    margin-left: -223px;
+    margin-top: 339px;
+  }
+
+  footer {
+    margin-top: 52px;
+
+    height: 410px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .contact-header {
+    font-size: 13px;
+  }
+  .info-title {
+    font-size: 12px;
+  }
+
+  .socials-header {
+    font-size: 12px;
+  }
+
+  .footer-contact {
+    margin-top: -44px;
+    margin-right: -64px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  .footer-phone {
+    font-size: 14px;
+  }
+
+  .info-list {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    margin-left: -148px;
+  }
+
+  .footer-info {
+    margin-left: 55px;
+  }
+  .footer-socials {
+    margin-left: 2px;
+  }
+  .social {
+    font-size: 14px;
+  }
 }
